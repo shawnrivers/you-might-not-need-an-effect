@@ -365,6 +365,7 @@ function Profile({ userId }) {
 
 ```jsx
 function List({ items }) {
+  const [isReverse, setIsReverse] = useState(false);
   const [selection, setSelection] = useState(null);
 
   // 🔴 When items prop changes, selection state is stale at first
@@ -386,6 +387,7 @@ function List({ items }) {
 
 ```jsx
 function List({ items }) {
+  const [isReverse, setIsReverse] = useState(false);
   const [selection, setSelection] = useState(null);
 
   // When items prop changes, List will immediately re-render
@@ -413,6 +415,7 @@ function List({ items }) {
 
 ```jsx
 function List({ items }) {
+  const [isReverse, setIsReverse] = useState(false);
   const [selectedId, setSelectedId] = useState(null);
   // Calculate everything during rendering
   const selection = items.find((item) => item.id === selectedId) ?? null;
